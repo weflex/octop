@@ -744,6 +744,17 @@
           }
           _request("GET", url, null, cb);
       };
+
+      // Post comment
+      // -------
+
+      this.createComment = function(number, body, cb) {
+          var url = repoPath + "/issues/" + number + "/comments";
+          _request("POST", url, {
+              body: body
+          }, cb);
+      };
+
     };
 
     // Gists API
