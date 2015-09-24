@@ -1,12 +1,12 @@
 {
-  "name": "github-api",
-  "version": "0.10.6",
+  "name": "octop",
+  "version": "1.0.0",
   "description": "A higher-level wrapper around the Github API.",
   "main": "github.js",
   "dependencies": {
-    "atob": "^1.1.2",
-    "btoa": "^1.1.2",
-    "xmlhttprequest": "~1.7.0"
+    "atob": "1.1.2",
+    "btoa": "1.1.2",
+    "xmlhttprequest": "1.7.0"
   },
   "devDependencies": {
     "argg": "0.0.1",
@@ -29,6 +29,7 @@
     "api"
   ],
   "contributors": [
+    "Yorkie Liu <yorkiefixer@gmail.com> (http://yorkie.ninja)",
     "Sergey Klimov <sergey.v.klimov@gmail.com> (http://darvin.github.com/)",
     "Michael Aufreiter (http://substance.io)",
     "Ændrew Rininsland <aendrew.rininsland@thetimes.co.uk> (http://www.aendrew.com)"

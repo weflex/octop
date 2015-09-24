@@ -1,17 +1,17 @@
-# Github.js
+# Octop
 
-[![Stories in Ready](https://badge.waffle.io/michael/github.png?label=ready&title=Ready)](https://waffle.io/michael/github)[![Build Status](https://travis-ci.org/darvin/github.svg?branch=master)](https://travis-ci.org/darvin/github)[![Coverage Status](https://img.shields.io/coveralls/michael/github.svg)](https://coveralls.io/r/michael/github)
+Octop provides a minimal higher-level wrapper around git's [plumbing commands](http://git-scm.com/book/en/Git-Internals-Plumbing-and-Porcelain), exposing an API for manipulating GitHub repositories on the file level. It is being developed in the context of [Prose](http://prose.io), a content editor for GitHub.
 
-Github.js provides a minimal higher-level wrapper around git's [plumbing commands](http://git-scm.com/book/en/Git-Internals-Plumbing-and-Porcelain), exposing an API for manipulating GitHub repositories on the file level. It is being developed in the context of [Prose](http://prose.io), a content editor for GitHub.
+This repo is now officially maintained by [WeFlex](https://github.com/weflex).
 
-This repo is now officially maintained by [DevelopmentSeed](https://github.com/developmentseed), the people behind [Prose.io](http://prose.io).
+> Note: this is a fork from [michael/github](https://github.com/michael/github), thanks to DevelopmentSeed.
 
 ## Installation
 
-Either grab `github.js` from this repo or install via NPM:
+Either grab `octop` from this repo or install via NPM:
 
 ```
-npm install github-api
+npm install octop --save
 ```
 
 ## Usage
@@ -319,55 +319,6 @@ Github.js has the following dependency:
 
 - btoa (included in modern browsers, an npm module is included in package.json for node)
 
-
 ## Compatibility
 
 [![browser support](https://ci.testling.com/darvin/github.png)](https://ci.testling.com/darvin/github)
-
-## Change Log
-
-### 0.10.X
-
-Create and delete repositories
-Repos - getCommit
-
-### 0.9.X
-
-Paging (introduced at tail end of 0.8.X, note: different callbacks for success & errors now)
-
-### 0.8.X
-
-Fixes and tweaks, simpler auth, CI tests, node.js support, Raw+JSON, UTF8, plus:
-Users - follow, unfollow, get info, notifications
-Gists - create
-Issues - get
-Repos - createRepo, deleteRepo, createBranch, star, unstar, isStarred, getCommits, listTags, listPulls, getPull, compare
-Hooks - listHooks, getHook, createHook, editHook, deleteHook
-
-### 0.7.X
-
-Switched to a native `request` implementation (thanks @mattpass). Adds support for GitHub gists, forks and pull requests.
-
-### 0.6.X
-
-Adds support for organizations and fixes an encoding issue.
-
-### 0.5.X
-
-Smart caching of latest commit sha.
-
-### 0.4.X
-
-Added support for [OAuth](http://developer.github.com/v3/oauth/).
-
-### 0.3.X
-
-Support for Moving and removing files.
-
-### 0.2.X
-
-Consider commit messages.
-
-### 0.1.X
-
-Initial version.
