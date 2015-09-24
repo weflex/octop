@@ -417,6 +417,9 @@
           cb = isRecursive;
           isRecursive = false;
         }
+        if (isRecursive) {
+          tree += '?recursive=true';
+        }
         _request("GET", repoPath + "/git/trees/" + tree, null, function(err, res) {
           if (err) return cb(err);
           cb(null, res.tree);

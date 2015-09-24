@@ -160,10 +160,10 @@ Exploring files of a repository is easy too by accessing the top level tree obje
 repo.getTree('master', function(err, tree) {});
 ```
 
-If you want to access all blobs and trees recursively, you can add `?recursive=true`.
+If you want to access all blobs and trees recursively, you can specify 2nd argument
 
 ```js
-repo.getTree('master?recursive=true', function(err, tree) {});
+repo.getTree('master', true, function(err, tree) {});
 ```
 
 Given a filepath, retrieve the reference blob or tree sha.
