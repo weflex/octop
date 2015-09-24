@@ -748,7 +748,7 @@
       // Post comment
       // -------
 
-      this.createComment = function(number, body, cb) {
+      this.comment = function(number, body, cb) {
           var url = repoPath + "/issues/" + number + "/comments";
           _request("POST", url, {
               body: body
