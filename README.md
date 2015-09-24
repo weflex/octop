@@ -1,5 +1,7 @@
 # Octop
 
+[![Build Status](https://travis-ci.org/weflex/octop.svg?branch=master)](https://travis-ci.org/weflex/octop)
+
 Octop provides a minimal higher-level wrapper around git's [plumbing commands](http://git-scm.com/book/en/Git-Internals-Plumbing-and-Porcelain), exposing an API for manipulating GitHub repositories on the file level. It is being developed in the context of [Prose](http://prose.io), a content editor for GitHub.
 
 This repo is now officially maintained by [WeFlex](https://github.com/weflex).
