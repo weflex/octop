@@ -26,6 +26,7 @@
 
   var Github = function(options) {
     var API_URL = options.apiUrl || 'https://api.github.com';
+    function loop () {}
 
     // HTTP Request Abstraction
     // =======
@@ -752,7 +753,15 @@
           var url = repoPath + "/issues/" + number + "/comments";
           _request("POST", url, {
               body: body
-          }, cb);
+          }, cb || loop);
+      };
+
+      // Add label
+      // -------
+
+      this.addLabels = function(number, labels, cb) {
+          var url = repoPath + "/issues/" + number + "/labels";
+          _request("POST", url, labels, cb || loop);
       };
 
     };
