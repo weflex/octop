@@ -265,7 +265,7 @@
 
       // Get tags
       // -------
-      
+
       this.getTags = function(cb) {
         _request('GET', repoPath + '/git/refs/tags', null, function(err, res) {
           if (err) {
@@ -412,8 +412,12 @@
       // Retrieve the tree a commit points to
       // -------
 
-      this.getTree = function(tree, cb) {
-        _request("GET", repoPath + "/git/trees/"+tree, null, function(err, res) {
+      this.getTree = function(tree, isRecursive, cb) {
+        if (typeof isRecursive === 'function') {
+          cb = isRecursive;
+          isRecursive = false;
+        }
+        _request("GET", repoPath + "/git/trees/" + tree, null, function(err, res) {
           if (err) return cb(err);
           cb(null, res.tree);
         });
