@@ -1,6 +1,6 @@
 {
   "name": "octop",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A higher-level wrapper around the Github API.",
   "main": "github.js",
   "dependencies": {
