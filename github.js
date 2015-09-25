@@ -760,8 +760,17 @@
       // -------
 
       this.addLabels = function(number, labels, cb) {
+          if (!Array.isArray(labels)) labels = [labels];
           var url = repoPath + "/issues/" + number + "/labels";
           _request("POST", url, labels, cb || loop);
+      };
+
+      // Remove label
+      // -------
+
+      this.removeLabel = function(number, label, cb) {
+          var url = repoPath + "/issues/" + number + "/labels/" + label;
+          _request("DELETE", url, cb || loop);
       };
 
     };
