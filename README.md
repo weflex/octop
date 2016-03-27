@@ -225,6 +225,12 @@ List authenticated user's gists.
 user.gists(function(err, gists) {});
 ```
 
+List private & public events for the authenticated user.
+
+```js
+user.events(function(err, events) {});
+```
+
 List unread notifications for the authenticated user.
 
 ```js

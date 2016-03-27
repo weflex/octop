@@ -144,6 +144,15 @@
         });
       };
 
+      // List Events
+      // -------
+
+      this.events = function(cb) {
+        _request("GET", '/events', null, function(err, res) {
+          cb(err,res);
+        });
+      };
+
       // List authenticated user's unread notifications
       // -------
 
